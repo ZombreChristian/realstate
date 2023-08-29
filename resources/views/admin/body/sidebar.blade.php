@@ -20,7 +20,7 @@
           </li>
           <li class="nav-item nav-category">Tableau de bord</li>
 
-        {{-- @if (Auth::user()->can('menu.perso')) --}}
+        @if (Auth::user()->can('menu.personnel'))
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#amenitie" role="button" aria-expanded="false" aria-controls="emails">
               <i class="link-icon" data-feather="mail"></i>
@@ -41,10 +41,10 @@
             </div>
           </li>
 
-          {{-- @endif
+          @endif
 
 
-         @if (Auth::user()->can('menu.perma')) --}}
+         @if (Auth::user()->can('menu.permanence'))
 
          <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#amenitie" role="button" aria-expanded="false" aria-controls="emails">
@@ -93,11 +93,11 @@
                 </ul>
               </div>
           </li>
-         {{-- @endif
+         @endif
 
 
 
-           @if (Auth::user()->can('menu.AMO')) --}}
+           @if (Auth::user()->can('menu.AMO'))
 
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#amenitie" role="button" aria-expanded="false" aria-controls="emails">
@@ -122,8 +122,8 @@
             </div>
           </li>
 
-          {{-- @endif
-         @if (Auth::user()->can('menu1')) --}}
+          @endif
+         @if (Auth::user()->can('menu.role'))
 
           <li class="nav-item nav-category">Profiles et Droits</li>
           <li class="nav-item">
@@ -153,8 +153,8 @@
               </ul>
             </div>
           </li>
-           {{-- @endif
-          @if (Auth::user()->can('menu2')) --}}
+           @endif
+          @if (Auth::user()->can('menu.utilisateur'))
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#admin" role="button" aria-expanded="false" aria-controls="advancedUI">
               <i class="link-icon" data-feather="anchor"></i>
@@ -166,12 +166,12 @@
                 <li class="nav-item">
                   <a href="{{route('all.admin')}}" class="nav-link">Liste des utilisateurs</a>
                 </li>
-               
+
               </ul>
             </div>
           </li>
 
-        {{-- @endif --}}
+        @endif
 
         </ul>
 

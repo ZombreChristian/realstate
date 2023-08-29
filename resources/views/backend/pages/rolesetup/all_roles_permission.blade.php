@@ -15,13 +15,13 @@
         <div class="col-md-12 grid-margin stretch-card">
 <div class="card">
   <div class="card-body">
-    <h6 class="card-title">All Roles Permission</h6>
+    <h6 class="card-title">Liste droit de profile</h6>
     <div class="table-responsive">
       <table  class="table">
         <thead>
           <tr>
             <th>Id#</th>
-            <th>Roles Name</th>
+            <th>Nom profile</th>
             <th>Permission</th>
             <th>Action</th>
 
