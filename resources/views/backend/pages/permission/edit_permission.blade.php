@@ -31,17 +31,8 @@
                                                       </div>
                                                       <div class="form-group">
                                                         <label for="exampleInputUsername1">Nom groupe</label>
-                                                        <select name="group_name" class="form-select @error('group_name') is-invalid @enderror" id="exampleFormControlSelect1" >
-                                                            <option selected="" disabled=""  >Select Groupe</option>
-                                                            <option value="personnel" {{$permissions->group_name=='personnel'? 'selected':''}}>Personnels</option>
-                                                            <option value="role"{{$permissions->group_name=='role'? 'selected':''}}>Role & Permission</option>                                                            <option value="permanence"{{$permissions->group_name=='permanence'? 'selected':''}}>Permanencier</option>
-                                                            <option value="amo"{{$permissions->group_name=='amo'? 'selected':''}}>AMO</option>
-                                                            <option value="permanence"{{$permissions->group_name=='permanence'? 'selected':''}}>Permanence</option>                                                            <option value="permanence"{{$permissions->group_name=='permanence'? 'selected':''}}>Permanencier</option>
+                                                        <input type="text" class="form-control @error('group_name') is-invalid @enderror" name="group_name" autocomplete="off" value="{{$permissions->group_name}}">
 
-
-
-
-                                                        </select>
                                                         @error('group_name')
                                                         <span class="text-danger">{{ $message}}</span>
                                                       @enderror

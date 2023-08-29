@@ -4,9 +4,20 @@
 <div class="page-content">
 
     <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
-      <div>
-        <h4 class="mb-3 mb-md-0">Welcome to Dashboard Gestionnaire</h4>
-      </div>
+        <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
+            <div class="container mx-auto px-6 py-8">
+
+
+                <h3 class="text-gray-700 text-3xl font-medium">Welcome : {{ auth()->user()->name }}</h3>
+
+                <p>Role : <b>
+                    @foreach(auth()->user()->roles as $role)
+                        {{ $role->name }}
+                    @endforeach
+                </b> </p>
+
+            </div>
+        </main>
       <div class="d-flex align-items-center flex-wrap text-nowrap">
         <div class="input-group date datepicker dashboard-date mr-2 mb-2 mb-md-0 d-md-none d-xl-flex" id="dashboardDate">
           <span class="input-group-addon bg-transparent"><i data-feather="calendar" class=" text-primary"></i></span>

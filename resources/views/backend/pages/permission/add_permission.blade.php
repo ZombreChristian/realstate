@@ -27,18 +27,13 @@
                                                             <span class="text-danger">{{ $message}}</span>
                                                           @enderror
                                                       </div>
+
                                                       <div class="form-group">
                                                         <label for="exampleInputUsername1">Nom groupe</label>
-                                                        <select name="group_name" class="form-select @error('group_name') is-invalid @enderror" id="exampleFormControlSelect1" >
-                                                            <option selected="" disabled="" >Select Group</option>
-                                                            <option value="personnel">Personnels</option>
-                                                            <option value="permanence">Permanencier</option>
-                                                            <option value="amo">AMO</option>
-                                                            <option value="role">Role & Permission</option>
-                                                        </select>
-                                                        @error('group_name')
-                                                        <span class="text-danger">{{ $message}}</span>
-                                                      @enderror
+                                                        <input type="text" class="form-control @error('group_name') is-invalid @enderror" name="group_name" autocomplete="off" >
+                                                            @error('group_name')
+                                                                    <span class="text-danger">{{ $message}}</span>
+                                                            @enderror
 
                                                     </div>
 

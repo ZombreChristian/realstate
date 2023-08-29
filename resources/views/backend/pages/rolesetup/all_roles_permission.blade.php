@@ -6,7 +6,7 @@
 
     <nav class="page-breadcrumb">
         <ol class="breadcrumb">
-            <a href="{{route('add.roles')}}" class="btn btn-inverse-info">Add Role</a>
+            <a href="{{route('add.roles.permission')}}" class="btn btn-inverse-info">Ajouter Profil de droit</a>
         </ol>
 
     </nav>

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
-
+use DB;
 
 
 class AdminController extends Controller
@@ -136,9 +136,14 @@ class AdminController extends Controller
         $user->address = $request->address;
         $user-> password = Hash::make($request->password);
         $user->role_id = $request->roles;
-
         $user-> status = 'active';
         $user->save();
+
+        DB::table('model_has_roles')->insert([
+            'role_id' =>$user->role_id  ,
+            'model_type'=>'App\Models\User',
+            'model_id' =>$user->id
+        ]);
 
         if ($request->roles) {
             $role = Role::where('name', $request->roles)->first();
