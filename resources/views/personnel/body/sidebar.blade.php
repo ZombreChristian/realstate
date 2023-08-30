@@ -22,15 +22,15 @@
 
       @if (Auth::user()->can('menu.personnel'))
       <li class="nav-item">
-          <a class="nav-link" data-toggle="collapse" href="#amenitie" role="button" aria-expanded="false" aria-controls="emails">
+          <a class="nav-link" data-toggle="collapse" href="#personnels" role="button" aria-expanded="false" aria-controls="emails">
             <i class="link-icon" data-feather="mail"></i>
-            <span class="link-title">Gestion du personnels</span>
+            <span class="link-title">Personnels</span>
             <i class="link-arrow" data-feather="chevron-down"></i>
           </a>
-          <div class="collapse" id="amenitie">
+          <div class="collapse" id="personnels">
             <ul class="nav sub-menu">
               <li class="nav-item">
-                <a href="#" class="nav-link">Personnels</a>
+                <a href="{{route('all.roles')}}" class="nav-link">Personnels</a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">Missions</a>
@@ -39,7 +39,26 @@
 
             </ul>
           </div>
-        </li>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" href="#missions" role="button" aria-expanded="false" aria-controls="emails">
+            <i class="link-icon" data-feather="mail"></i>
+            <span class="link-title">Missions</span>
+            <i class="link-arrow" data-feather="chevron-down"></i>
+          </a>
+          <div class="collapse" id="missions">
+            <ul class="nav sub-menu">
+              <li class="nav-item">
+                <a href="{{route('all.roles')}}" class="nav-link">Personnels</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Missions</a>
+              </li>
+
+
+            </ul>
+          </div>
+      </li>
 
         @endif
 

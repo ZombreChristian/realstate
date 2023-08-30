@@ -74,6 +74,9 @@ Route::middleware(['auth', 'roles:personnel'])->group(function () {
 // end groupe personnel Middleware
 
 
+
+
+
 // start groupe permanencier Middleware
  Route::middleware(['auth', 'roles:permanencier'])->group(function () {
     Route::get('/permanencier/dashboard', [PermanencierController::class, 'PermanencierDashboard'])->name('permanencier.dashboard');
@@ -147,9 +150,3 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
 
 
 }); // end groupe Admin Middleware
-
-
-
-
-
-

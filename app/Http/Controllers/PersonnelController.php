@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+use DB;
 
 
 
@@ -108,5 +111,7 @@ class PersonnelController extends Controller
 
 
     }
+
+
 
 }
